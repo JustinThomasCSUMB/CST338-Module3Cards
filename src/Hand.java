@@ -124,3 +124,77 @@ public class Hand
    }   
    
 }// end Hand class
+
+/**
+ * Test output phase 2
+Filling Hand
+HandFull
+Testing inspectCard()
+A of spades
+** illegal **
+Printing full hand
+Hand = ( A of spades, J of clubs, A of spades, J of clubs, A of spades, J of clu
+bs, A of spades, J of clubs, A of spades, J of clubs, A of spades, J of clubs, A
+ of spades, J of clubs, A of spades, J of clubs, A of spades, J of clubs, A of s
+pades, J of clubs, A of spades, J of clubs, A of spades, J of clubs, A of spades
+, J of clubs, A of spades, J of clubs, A of spades, J of clubs, A of spades, J o
+f clubs, A of spades, J of clubs, A of spades, J of clubs, A of spades, J of clu
+bs, A of spades, J of clubs, A of spades, J of clubs, A of spades, J of clubs, A
+ of spades, J of clubs, A of spades, J of clubs, A of spades, J of clubs, A of s
+pades, J of clubs )
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+J of clubs
+A of spades
+Printing empty hand
+Hand = (  )
+
+ */
