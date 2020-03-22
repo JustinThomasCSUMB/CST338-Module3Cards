@@ -71,8 +71,8 @@ public class DeckOfCards
 }
 
 class Card {
-   // enum storing card suits
-   public enum Suit {clubs, diamonds, hearts, spades}
+   // enum storing card suits (Method made static)
+   public static enum Suit {clubs, diamonds, hearts, spades}
 
    // Private Statics for Card Class
    private static final char DEFAULT_VALUE = 'A';
@@ -142,10 +142,11 @@ class Card {
    private boolean isValid(char value, Suit suit) {
       // Although suit is passed it is not checked
 
-      // Return true if value is a valid value else false
+      // Return true if value is a valid value else false (added 'Q')
       return ((value >= '2' && value <= '9') ||
               value == 'A' ||
               value == 'K' ||
+              value == 'Q' ||
               value == 'J' ||
               value == 'T');
    }

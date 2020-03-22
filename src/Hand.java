@@ -47,7 +47,8 @@ public class Hand
       
       // copy all cards, no references, the list can be deleted
       for(int i = 0; i < currentLength; i++) {
-         myCards[i] = new Card(currentHand[i].getValue(), currentHand[i].getSuit());         
+         myCards[i] =
+               new Card(currentHand[i].getValue(), currentHand[i].getSuit()); 
       }
       
       // add the new card
@@ -70,7 +71,8 @@ public class Hand
       }
       
       int newLength = length - 1;
-      Card playedCard = new Card(myCards[newLength].getValue(), myCards[newLength].getSuit());
+      Card playedCard = new Card(myCards[newLength].getValue(),
+            myCards[newLength].getSuit());
       Card[] oldHand = myCards.clone();
       
       //remove the card from the array, recreate the array      
