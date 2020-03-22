@@ -118,13 +118,13 @@ public class Deck
    }
    
    // Returns the card at the 'topCard' position of the deck and simulates the
-   // removal from the deck by incrementing topCard by 1. Also, throws an
-   // exception if the 'topCard' index exceeds the number of cards in the deck.
+   // removal from the deck by incrementing topCard by 1. Also, returns
+   // null if there are no more cards left.
    public Card dealCard()
    {
       if (topCard == cards.length)
       {
-         throw new NullPointerException("NO MORE CARDS LEFT TO DEAL!");
+         return null;
       }
       
       int temp = topCard;
@@ -161,382 +161,382 @@ public class Deck
       }
       
       // These four blocks fill the masterPack with Cards
-      masterPack[0] = new Card('A', Card.Suit.clubs);
-      masterPack[1] = new Card('K', Card.Suit.hearts);
-      masterPack[2] = new Card('2', Card.Suit.clubs);
-      masterPack[3] = new Card('3', Card.Suit.clubs);
-      masterPack[4] = new Card('4', Card.Suit.clubs);
-      masterPack[5] = new Card('5', Card.Suit.clubs);
-      masterPack[6] = new Card('6', Card.Suit.clubs);
-      masterPack[7] = new Card('7', Card.Suit.clubs);
-      masterPack[8] = new Card('8', Card.Suit.clubs);
-      masterPack[9] = new Card('9', Card.Suit.clubs);
-      masterPack[10] = new Card('T', Card.Suit.clubs);
-      masterPack[11] = new Card('Q', Card.Suit.clubs);
-      masterPack[12] = new Card('K', Card.Suit.clubs);
+      masterPack[0] = new Card('K', Card.Suit.spades);
+      masterPack[1] = new Card('Q', Card.Suit.spades);
+      masterPack[2] = new Card('J', Card.Suit.spades);
+      masterPack[3] = new Card('T', Card.Suit.spades);
+      masterPack[4] = new Card('9', Card.Suit.spades);
+      masterPack[5] = new Card('8', Card.Suit.spades);
+      masterPack[6] = new Card('7', Card.Suit.spades);
+      masterPack[7] = new Card('6', Card.Suit.spades);
+      masterPack[8] = new Card('5', Card.Suit.spades);
+      masterPack[9] = new Card('4', Card.Suit.spades);
+      masterPack[10] = new Card('3', Card.Suit.spades);
+      masterPack[11] = new Card('2', Card.Suit.spades);
+      masterPack[12] = new Card('A', Card.Suit.spades);
       
-      masterPack[13] = new Card('A', Card.Suit.spades);
+      masterPack[13] = new Card('K', Card.Suit.hearts);
       masterPack[14] = new Card('Q', Card.Suit.hearts);
-      masterPack[15] = new Card('2', Card.Suit.spades);
-      masterPack[16] = new Card('3', Card.Suit.spades);
-      masterPack[17] = new Card('4', Card.Suit.spades);
-      masterPack[18] = new Card('5', Card.Suit.spades);
-      masterPack[19] = new Card('6', Card.Suit.spades);
-      masterPack[20] = new Card('7', Card.Suit.spades);
-      masterPack[21] = new Card('8', Card.Suit.spades);
-      masterPack[22] = new Card('9', Card.Suit.spades);
-      masterPack[23] = new Card('T', Card.Suit.spades);
-      masterPack[24] = new Card('Q', Card.Suit.spades);
-      masterPack[25] = new Card('K', Card.Suit.spades);
+      masterPack[15] = new Card('J', Card.Suit.hearts);
+      masterPack[16] = new Card('T', Card.Suit.hearts);
+      masterPack[17] = new Card('9', Card.Suit.hearts);
+      masterPack[18] = new Card('8', Card.Suit.hearts);
+      masterPack[19] = new Card('7', Card.Suit.hearts);
+      masterPack[20] = new Card('6', Card.Suit.hearts);
+      masterPack[21] = new Card('5', Card.Suit.hearts);
+      masterPack[22] = new Card('4', Card.Suit.hearts);
+      masterPack[23] = new Card('3', Card.Suit.hearts);
+      masterPack[24] = new Card('2', Card.Suit.hearts);
+      masterPack[25] = new Card('A', Card.Suit.hearts);
       
-      masterPack[26] = new Card('A', Card.Suit.diamonds);
-      masterPack[27] = new Card('T', Card.Suit.hearts);
-      masterPack[28] = new Card('2', Card.Suit.diamonds);
-      masterPack[29] = new Card('3', Card.Suit.diamonds);
-      masterPack[30] = new Card('4', Card.Suit.diamonds);
-      masterPack[31] = new Card('5', Card.Suit.diamonds);
-      masterPack[32] = new Card('6', Card.Suit.diamonds);
-      masterPack[33] = new Card('7', Card.Suit.diamonds);
-      masterPack[34] = new Card('8', Card.Suit.diamonds);
-      masterPack[35] = new Card('9', Card.Suit.diamonds);
-      masterPack[36] = new Card('T', Card.Suit.diamonds);
-      masterPack[37] = new Card('Q', Card.Suit.diamonds);
-      masterPack[38] = new Card('K', Card.Suit.diamonds);
+      masterPack[26] = new Card('K', Card.Suit.diamonds);
+      masterPack[27] = new Card('Q', Card.Suit.diamonds);
+      masterPack[28] = new Card('J', Card.Suit.diamonds);
+      masterPack[29] = new Card('T', Card.Suit.diamonds);
+      masterPack[30] = new Card('9', Card.Suit.diamonds);
+      masterPack[31] = new Card('8', Card.Suit.diamonds);
+      masterPack[32] = new Card('7', Card.Suit.diamonds);
+      masterPack[33] = new Card('6', Card.Suit.diamonds);
+      masterPack[34] = new Card('5', Card.Suit.diamonds);
+      masterPack[35] = new Card('4', Card.Suit.diamonds);
+      masterPack[36] = new Card('3', Card.Suit.diamonds);
+      masterPack[37] = new Card('2', Card.Suit.diamonds);
+      masterPack[38] = new Card('A', Card.Suit.diamonds);
       
-      masterPack[39] = new Card('A', Card.Suit.hearts);
-      masterPack[40] = new Card('9', Card.Suit.hearts);
-      masterPack[41] = new Card('2', Card.Suit.hearts);
-      masterPack[42] = new Card('3', Card.Suit.hearts);
-      masterPack[43] = new Card('4', Card.Suit.hearts);
-      masterPack[44] = new Card('5', Card.Suit.hearts);
-      masterPack[45] = new Card('6', Card.Suit.hearts);
-      masterPack[46] = new Card('7', Card.Suit.hearts);
-      masterPack[47] = new Card('8', Card.Suit.hearts);      
-      
-      masterPack[48] = new Card('J', Card.Suit.hearts);
-      masterPack[49] = new Card('J', Card.Suit.diamonds);
-      masterPack[50] = new Card('J', Card.Suit.spades);
-      masterPack[51] = new Card('J', Card.Suit.clubs);
+      masterPack[39] = new Card('K', Card.Suit.clubs);
+      masterPack[40] = new Card('Q', Card.Suit.clubs);
+      masterPack[41] = new Card('J', Card.Suit.clubs);
+      masterPack[42] = new Card('T', Card.Suit.clubs);
+      masterPack[43] = new Card('9', Card.Suit.clubs);
+      masterPack[44] = new Card('8', Card.Suit.clubs);
+      masterPack[45] = new Card('7', Card.Suit.clubs);
+      masterPack[46] = new Card('6', Card.Suit.clubs);
+      masterPack[47] = new Card('5', Card.Suit.clubs);
+      masterPack[48] = new Card('4', Card.Suit.clubs);
+      masterPack[49] = new Card('3', Card.Suit.clubs);
+      masterPack[50] = new Card('2', Card.Suit.clubs);
+      masterPack[51] = new Card('A', Card.Suit.clubs);
    }
 }
 /*********************** OUTPUT ***********************************************
 ----------- 2 Decks (Unshuffled) ------------------
-A of clubs
-K of hearts
-2 of clubs
-3 of clubs
-4 of clubs
-5 of clubs
-6 of clubs
-7 of clubs
-8 of clubs
-9 of clubs
-T of clubs
-Q of clubs
-K of clubs
-A of spades
-Q of hearts
-2 of spades
-3 of spades
-4 of spades
-5 of spades
-6 of spades
-7 of spades
-8 of spades
-9 of spades
-T of spades
-Q of spades
 K of spades
-A of diamonds
-T of hearts
-2 of diamonds
-3 of diamonds
-4 of diamonds
-5 of diamonds
-6 of diamonds
-7 of diamonds
-8 of diamonds
-9 of diamonds
-T of diamonds
-Q of diamonds
-K of diamonds
-A of hearts
-9 of hearts
-2 of hearts
-3 of hearts
-4 of hearts
-5 of hearts
-6 of hearts
-7 of hearts
-8 of hearts
-J of hearts
-J of diamonds
-J of spades
-J of clubs
-A of clubs
-K of hearts
-2 of clubs
-3 of clubs
-4 of clubs
-5 of clubs
-6 of clubs
-7 of clubs
-8 of clubs
-9 of clubs
-T of clubs
-Q of clubs
-K of clubs
-A of spades
-Q of hearts
-2 of spades
-3 of spades
-4 of spades
-5 of spades
-6 of spades
-7 of spades
-8 of spades
-9 of spades
-T of spades
 Q of spades
-K of spades
-A of diamonds
-T of hearts
-2 of diamonds
-3 of diamonds
-4 of diamonds
-5 of diamonds
-6 of diamonds
-7 of diamonds
-8 of diamonds
-9 of diamonds
-T of diamonds
-Q of diamonds
-K of diamonds
-A of hearts
-9 of hearts
-2 of hearts
-3 of hearts
-4 of hearts
-5 of hearts
-6 of hearts
-7 of hearts
-8 of hearts
-J of hearts
-J of diamonds
 J of spades
+T of spades
+9 of spades
+8 of spades
+7 of spades
+6 of spades
+5 of spades
+4 of spades
+3 of spades
+2 of spades
+A of spades
+K of hearts
+Q of hearts
+J of hearts
+T of hearts
+9 of hearts
+8 of hearts
+7 of hearts
+6 of hearts
+5 of hearts
+4 of hearts
+3 of hearts
+2 of hearts
+A of hearts
+K of diamonds
+Q of diamonds
+J of diamonds
+T of diamonds
+9 of diamonds
+8 of diamonds
+7 of diamonds
+6 of diamonds
+5 of diamonds
+4 of diamonds
+3 of diamonds
+2 of diamonds
+A of diamonds
+K of clubs
+Q of clubs
 J of clubs
+T of clubs
+9 of clubs
+8 of clubs
+7 of clubs
+6 of clubs
+5 of clubs
+4 of clubs
+3 of clubs
+2 of clubs
+A of clubs
+K of spades
+Q of spades
+J of spades
+T of spades
+9 of spades
+8 of spades
+7 of spades
+6 of spades
+5 of spades
+4 of spades
+3 of spades
+2 of spades
+A of spades
+K of hearts
+Q of hearts
+J of hearts
+T of hearts
+9 of hearts
+8 of hearts
+7 of hearts
+6 of hearts
+5 of hearts
+4 of hearts
+3 of hearts
+2 of hearts
+A of hearts
+K of diamonds
+Q of diamonds
+J of diamonds
+T of diamonds
+9 of diamonds
+8 of diamonds
+7 of diamonds
+6 of diamonds
+5 of diamonds
+4 of diamonds
+3 of diamonds
+2 of diamonds
+A of diamonds
+K of clubs
+Q of clubs
+J of clubs
+T of clubs
+9 of clubs
+8 of clubs
+7 of clubs
+6 of clubs
+5 of clubs
+4 of clubs
+3 of clubs
+2 of clubs
+A of clubs
 ----------- 2 Decks (Shuffled) --------------------
-K of spades
-6 of diamonds
+8 of spades
+4 of diamonds
+K of clubs
 A of diamonds
+K of clubs
+Q of diamonds
+7 of hearts
+T of diamonds
+J of hearts
+T of hearts
+3 of hearts
+4 of diamonds
+J of clubs
+T of clubs
+J of hearts
+Q of clubs
+T of spades
+4 of clubs
+K of hearts
+3 of clubs
+9 of clubs
+5 of diamonds
+2 of diamonds
+2 of clubs
+5 of hearts
+8 of hearts
+7 of hearts
+6 of clubs
+8 of diamonds
+5 of clubs
+T of hearts
+A of hearts
+8 of spades
+2 of diamonds
+8 of clubs
+6 of spades
+2 of spades
+A of clubs
+9 of spades
+Q of spades
+J of diamonds
+5 of diamonds
+J of diamonds
+8 of diamonds
+A of clubs
+Q of clubs
+9 of diamonds
+7 of clubs
+J of clubs
+6 of spades
+4 of clubs
+Q of hearts
+6 of clubs
+J of spades
+5 of clubs
+9 of hearts
 3 of diamonds
 2 of spades
-9 of diamonds
-5 of diamonds
-Q of diamonds
-9 of clubs
-6 of spades
-A of diamonds
-7 of clubs
-9 of spades
-K of diamonds
-9 of hearts
-8 of hearts
-5 of spades
-8 of diamonds
-Q of clubs
-J of spades
-9 of diamonds
-3 of spades
-J of hearts
-4 of diamonds
-7 of diamonds
-6 of hearts
-4 of clubs
-8 of hearts
-Q of spades
-A of clubs
-J of clubs
-2 of diamonds
-2 of spades
-T of diamonds
-A of spades
-2 of hearts
-J of diamonds
-6 of spades
-5 of hearts
-7 of clubs
-J of clubs
-8 of clubs
-4 of hearts
-5 of spades
-7 of hearts
-5 of diamonds
-3 of hearts
-Q of spades
-T of diamonds
-5 of clubs
-3 of clubs
-8 of clubs
-6 of clubs
-K of hearts
-K of hearts
-3 of hearts
-A of spades
-2 of diamonds
-J of diamonds
-8 of spades
-6 of hearts
-K of spades
-2 of clubs
-T of spades
-Q of hearts
-A of clubs
-4 of diamonds
-8 of diamonds
-Q of diamonds
-6 of clubs
-7 of diamonds
-4 of clubs
-Q of clubs
-Q of hearts
-K of clubs
-T of clubs
-3 of clubs
 4 of spades
-T of clubs
-2 of clubs
-7 of spades
-T of hearts
-4 of hearts
-7 of hearts
-2 of hearts
-5 of hearts
-7 of spades
-9 of clubs
-3 of spades
-K of clubs
-5 of clubs
-K of diamonds
-9 of spades
-J of hearts
-J of spades
-A of hearts
+3 of clubs
 6 of diamonds
-4 of spades
-T of spades
-3 of diamonds
+A of spades
+4 of hearts
+9 of diamonds
+2 of hearts
 A of hearts
-T of hearts
-8 of spades
+7 of spades
+4 of spades
+9 of clubs
+T of clubs
+8 of clubs
+5 of spades
+A of diamonds
+5 of spades
+5 of hearts
+6 of hearts
+8 of hearts
+3 of spades
+K of spades
+7 of clubs
 9 of hearts
+Q of spades
+2 of hearts
+A of spades
+Q of hearts
+4 of hearts
+7 of diamonds
+6 of diamonds
+T of diamonds
+K of diamonds
+2 of clubs
+3 of hearts
+T of spades
+6 of hearts
+3 of diamonds
+Q of diamonds
+K of hearts
+K of spades
+7 of diamonds
+9 of spades
+3 of spades
+K of diamonds
+7 of spades
+J of spades
 -------------------------------------------------
 
 ----------- 1 Deck (Unshuffled) -------------------
-A of clubs
-K of hearts
-2 of clubs
-3 of clubs
-4 of clubs
-5 of clubs
-6 of clubs
-7 of clubs
-8 of clubs
-9 of clubs
-T of clubs
-Q of clubs
-K of clubs
-A of spades
-Q of hearts
-2 of spades
-3 of spades
-4 of spades
-5 of spades
-6 of spades
-7 of spades
-8 of spades
-9 of spades
-T of spades
-Q of spades
 K of spades
-A of diamonds
-T of hearts
-2 of diamonds
-3 of diamonds
-4 of diamonds
-5 of diamonds
-6 of diamonds
-7 of diamonds
-8 of diamonds
-9 of diamonds
-T of diamonds
-Q of diamonds
-K of diamonds
-A of hearts
-9 of hearts
-2 of hearts
-3 of hearts
-4 of hearts
-5 of hearts
-6 of hearts
-7 of hearts
-8 of hearts
-J of hearts
-J of diamonds
+Q of spades
 J of spades
+T of spades
+9 of spades
+8 of spades
+7 of spades
+6 of spades
+5 of spades
+4 of spades
+3 of spades
+2 of spades
+A of spades
+K of hearts
+Q of hearts
+J of hearts
+T of hearts
+9 of hearts
+8 of hearts
+7 of hearts
+6 of hearts
+5 of hearts
+4 of hearts
+3 of hearts
+2 of hearts
+A of hearts
+K of diamonds
+Q of diamonds
+J of diamonds
+T of diamonds
+9 of diamonds
+8 of diamonds
+7 of diamonds
+6 of diamonds
+5 of diamonds
+4 of diamonds
+3 of diamonds
+2 of diamonds
+A of diamonds
+K of clubs
+Q of clubs
 J of clubs
+T of clubs
+9 of clubs
+8 of clubs
+7 of clubs
+6 of clubs
+5 of clubs
+4 of clubs
+3 of clubs
+2 of clubs
+A of clubs
 ----------- 1 Deck (Shuffled) ---------------------
-6 of spades
-6 of clubs
-T of spades
-2 of spades
-5 of hearts
-K of diamonds
-5 of clubs
-9 of diamonds
-6 of hearts
-K of clubs
-Q of spades
-8 of spades
-3 of hearts
-J of spades
-T of diamonds
-2 of clubs
-Q of hearts
-J of clubs
-J of hearts
-A of diamonds
-5 of spades
-K of hearts
-8 of diamonds
-A of clubs
-7 of hearts
-T of hearts
-4 of hearts
-9 of hearts
-9 of clubs
-2 of diamonds
-5 of diamonds
-7 of spades
-Q of clubs
-A of spades
-A of hearts
-9 of spades
-4 of diamonds
-4 of spades
-6 of diamonds
-3 of clubs
-T of clubs
-4 of clubs
-7 of diamonds
-2 of hearts
-8 of hearts
-J of diamonds
-3 of spades
-8 of clubs
-Q of diamonds
-3 of diamonds
-K of spades
 7 of clubs
+Q of diamonds
+7 of hearts
+5 of clubs
+T of spades
+A of hearts
+A of diamonds
+4 of spades
+4 of diamonds
+2 of hearts
+9 of clubs
+3 of hearts
+6 of clubs
+5 of hearts
+Q of hearts
+Q of spades
+4 of hearts
+3 of diamonds
+8 of clubs
+T of diamonds
+7 of diamonds
+9 of spades
+5 of spades
+7 of spades
+9 of hearts
+8 of diamonds
+2 of diamonds
+8 of hearts
+2 of clubs
+4 of clubs
+J of clubs
+8 of spades
+Q of clubs
+3 of spades
+J of diamonds
+6 of hearts
+6 of spades
+K of clubs
+K of hearts
+5 of diamonds
+9 of diamonds
+T of clubs
+A of spades
+J of hearts
+T of hearts
+3 of clubs
+J of spades
+2 of spades
+A of clubs
+K of diamonds
+6 of diamonds
+K of spades
 -------------------------------------------------
+
 ******************************************************************************/
