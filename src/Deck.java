@@ -95,7 +95,7 @@ public class Deck
             cards[index] = masterPack[i];
             index++;
          }
-         
+         topCard = 0;
          numPacks -= 1;
       }     
    }
