@@ -22,43 +22,43 @@ public class DeckOfCards
 //      System.out.println(illegalCard.toString());
       card3 = new Card('j', Card.Suit.clubs);
 //      System.out.println(card3.toString());
-      
-      
+
+
       // Hand class debug code (phase 2)
       // TODO: remove when finished
       Hand myHand = new Hand();
       boolean success = true;
-       
+
       System.out.println("Filling Hand");
-      for(int i = 0; i < 100; i++) {                 
+      for(int i = 0; i < 100; i++) {
          success = myHand.takeCard(card1);
          success = myHand.takeCard(card3);
-         
+
          if(!success) {
             System.out.println("HandFull");
             break;
          }
       }
-      
+
       System.out.println("Testing inspectCard()");
       Card inspect1 = myHand.inspectCard(10);
       Card inspect2 = myHand.inspectCard(-1);
-      
+
       System.out.println(inspect1.toString());
       System.out.println(inspect2.toString());
-      
+
       System.out.println("Printing full hand");
       System.out.println(myHand.toString());
-      
+
       for(int i = 0; i < 52; i++) {
          System.out.println(myHand.playCard().toString());
       }
-         
+
       System.out.println("Printing empty hand");
       System.out.println(myHand.toString());
-       // end phase 2 test code   
-      
-      
+       // end phase 2 test code
+
+
       // Card class equality check
       /*
        * Card identicalCard3 = new Card('J', Card.Suit.clubs);
