@@ -143,7 +143,7 @@ public class DeckOfCards
 
 class Card {
    // enum storing card suits (Method made static)
-   public static enum Suit {clubs, diamonds, hearts, spades}
+   public enum Suit {clubs, diamonds, hearts, spades}
 
    // Private Statics for Card Class
    private static final char DEFAULT_VALUE = 'A';
@@ -154,7 +154,9 @@ class Card {
    private Suit suit;
    private boolean errorFlag;
 
-   // Constructor with no parameters
+   /**
+    * Card Constructor with no parameters
+    */
    public Card() {
       this(DEFAULT_VALUE, DEFAULT_SUIT);
    }
@@ -246,7 +248,7 @@ class Deck
    }
 
    // Re-populates the cards[] with new cards. Resetting it to its original,
-   //unshuffled state.
+   // un-shuffled state.
    // Methods
    public void init(int numPacks)
    {
@@ -449,7 +451,6 @@ class Hand
     */
    public Card playCard() {
       // what if there are no cards to play, for now return new card with error
-      // TODO: implement this better or have error check before this is called
       int length = myCards.length;
       if(length < 1) {
          return new Card('*', Card.Suit.spades);
@@ -479,7 +480,6 @@ class Hand
    @Override
    public String toString() {
       String hand = "Hand = ( ";
-      ;
 
       for(int i = 0; i < numCards; i++) {
          hand += myCards[i].toString();
